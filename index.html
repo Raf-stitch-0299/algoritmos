@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+   <meta charset="UTF-8">
+    <link rel="stylesheet" href="estilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Média dos alunos</title>
+</head>
+<body>
+    <h1>Média do aluno </h1>
+
+    <div id="resultado"></div>
+
+    <script type="text/javascript">
+        var aluno, n1, n2, n3, media;
+    
+        aluno = prompt(" Informe o nome do aluno");
+    
+        n1 = prompt(" Informe a nota 1");
+        n1 = eval(n1);
+    
+        n2 = prompt(" Informe a nota 2");
+        n2 = eval(n2);
+    
+        n3 = prompt(" Informe a nota 3 ");
+        n3 = eval(n3);
+        
+        media = (n1 + n2 + n3) / 3;
+        
+        var resultado = document.getElementById("resultado");
+        resultado.innerHTML = aluno + " sua média é " + media;
+        resultado.classList.add("mensagem");
+    
+        if (media >= 6) {
+            resultado.innerHTML += " parabéns, você foi APROVADO";
+        } else if (media <= 5) {
+            resultado.innerHTML += " parabéns, você foi REPROVADO";
+        } else {
+            resultado.innerHTML += " infelizmente, você está de RECUPERAÇÃO";
+        }
+    </script>
+    
+    <style>
+      .mensagem {
+        font-size: 24px;
+        font-weight: bold;
+        color: #ffffff;
+        font-family: "Comic Sans MS", cursive, sans-serif;
+      }
+    </style>
+
+
+
+<footer>
+    <p> Direitos de criação do site carrossel-3D Rafael Barreto &copy; (rafaelbarreto2425@gmail.com)</p>
+  </footer>
+    
+</body>
+</html>
